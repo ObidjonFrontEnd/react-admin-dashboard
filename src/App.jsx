@@ -14,6 +14,15 @@ import Teachers from './pages/teachers.jsx'
 
 function App() {
  
+  let user = {
+    name:"Obidjon",
+    surname:"Yolgoshov",
+    age:22,
+    xoby:"gaming",
+    education:"Najot Ta'lim",
+  }
+
+  let fructs = ['olma' , 'banan' , 'ananas' , 'nok' , 'shaftoli']
 
   return (
     <section>
@@ -21,8 +30,8 @@ function App() {
         <Routes>
 
           <Route element={<MainLayout/>}>
-              <Route path='/' element={<Home/>}></Route>
-              <Route path='/Teachers' element={<Teachers/>}></Route>
+              <Route  path='/' element={<Home/>}></Route>
+              <Route path='/Teachers' element={<Teachers user={user} fructs={fructs} />}></Route>
           </Route>
 
           <Route  element={<AutheLAyout/>}>
